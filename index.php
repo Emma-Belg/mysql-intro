@@ -5,9 +5,11 @@ ini_set('display_errors', "1");
 ini_set('display_startup_errors', "1");
 error_reporting(E_ALL);
 
-require "connection.php";
+require "Method/connection.php";
+require "View/form-view.php";
 
-$connection = openConnection();
-if ($connection){
-    echo "connected!!!";
+
+$connection = new Connection();
+if ($connection->openConnection()){
+    echo "Database is connected";
 }

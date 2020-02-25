@@ -1,3 +1,8 @@
 <?php
-include "connection.php";
-//if ($_SESSION)
+require "connection.php";
+
+class Insert {
+    //if ($_SESSION)
+
+}
+

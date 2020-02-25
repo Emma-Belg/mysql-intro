@@ -1,19 +1,22 @@
 <?php
-function openConnection() {
-    // Try to figure out what these should be for you
-    $dbhost    = "localhost";
-    $dbuser    = "becode";
-    $dbpass    = "Password123!";
-    $db        = "becode";
 
-    // Try to understand what happens here
-    $pdo = new PDO('mysql:host='. $dbhost.';dbname='. $db, $dbuser, $dbpass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+class Connection  {
+    function openConnection() {
+        // Try to figure out what these should be for you
+        $dbhost    = "localhost";
+        $dbuser    = "becode";
+        $dbpass    = "Password123!";
+        $db        = "becode";
 
- // Why we do this here
- return $pdo;
+        // Try to understand what happens here
+        $pdo = new PDO('mysql:host='. $dbhost.';dbname='. $db, $dbuser, $dbpass);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+
+        // Why we do this here
+        return $pdo;
+    }
+
 }
 
-//MAYBE THIS SHOULD ONLY BE ON THE INDEX
 
