@@ -34,8 +34,8 @@
                     <input type="text" id="username" name="username" class="form-control">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="linkdin">Linkdin</label>
-                    <input type="text" id="linkdin" name="linkdin" class="form-control">
+                    <label for="linkedin">LinkedIn</label>
+                    <input type="text" id="linkedin" name="linkedin" class="form-control">
                 </div>
             </div>
             <div class="form-row">
