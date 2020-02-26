@@ -80,10 +80,11 @@
         <button type="submit" class="btn btn-primary" name="submit">Send</button>
     </form>
 
-    <a class="btn btn-primary" href="profile-view.php">Go to profile</a>
+    <a class="btn btn-primary" href="../profile-view.php">Go to profile</a>
 
+    <form method="post">
     <table class="" style="border: 1px solid black;">
-        <?php foreach ($students as $print): ?>
+
         <tr>
             <th>
                 First Name
@@ -101,6 +102,7 @@
                 Profile
             </th>
         </tr>
+        <?php foreach ($students as $print): ?>
         <tr>
             <td>
                 <?php echo $print ["first_name"]?>
@@ -117,25 +119,11 @@
             <td>
                 <?php echo $print ["github"]?>
             </td>
-        </tr>
-        <tr>
             <td>
-
+                <a href="../profile-view.php?user=<?php echo $print ["id"]?>">To Profile</a>
             </td>
-            <td>
 
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
             <?php endforeach;?>
-        </tr>
     </table>
 </div>
 
