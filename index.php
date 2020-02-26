@@ -5,10 +5,10 @@ ini_set('display_errors', "1");
 ini_set('display_startup_errors', "1");
 error_reporting(E_ALL);
 
-require "Controller/formController.php";
 require "Method/connection.php";
 require "Method/insert.php";
-require "View/form-view.php";
+require "Controller/formController.php";
+
 
 function whatIsHappening()
 {

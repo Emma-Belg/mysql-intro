@@ -31,6 +31,17 @@ class Insert extends Connection {
             $_POST['video'], $_POST['quote'], $_POST['quoteauthor']);
     }*/
 
+
+    public function gettingData(): array
+    {
+        //select rows from the db based on a given query
+
+        $sql = "SELECT * FROM student";
+        $statement = $this->openConnection()->prepare($sql);
+        $statement->execute([]);
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 public function insertInto($firstname, $lastname, $username, $linkedin, $github, $email, $preflang, $avatar, $video, $quote, $quoteauthor){
     $insert = "INSERT INTO student (first_name, last_name, username, linkedin, github, email, preferred_language, avatar, video, quote, quote_author)
     VALUES (:firstname, :lastname, :username, :linkedin, :github, :email, :preflang, :avatar, :video, :quote, :quoteauthor)";
@@ -47,6 +58,8 @@ public function insertInto($firstname, $lastname, $username, $linkedin, $github,
         'video' => $video,
         'quote' => $quote,
         'quoteauthor' => $quoteauthor]);
+
+    return $dataToPrint = $makeStatement;
 }
 
 

@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 
+
 class formController{
 
     public static function makeConnection(){
@@ -20,5 +21,9 @@ class formController{
             $inputFromForm = new Insert();
             $inputFromForm->insertInto($_POST['firstname'], $_POST['lastname'], $_POST['username'], $_POST['linkedin'], $_POST['github'], $_POST['email'], $_POST['preflang'], $_POST['avatar'], $_POST['video'], $_POST['quote'], $_POST['quoteauthor']);
         }
+        $statement = new Insert();
+        $students = $statement->gettingData();
+
+        require "View/form-view.php";
     }
 }
