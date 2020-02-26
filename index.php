@@ -6,7 +6,9 @@ ini_set('display_startup_errors', "1");
 error_reporting(E_ALL);
 
 require "Method/connection.php";
+require "Method/getFromDB.php";
 require "Method/insert.php";
+
 require "Controller/formController.php";
 
 

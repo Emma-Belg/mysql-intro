@@ -80,6 +80,8 @@
         <button type="submit" class="btn btn-primary" name="submit">Send</button>
     </form>
 
+    <a class="btn btn-primary" href="profile-view.php">Go to profile</a>
+
     <table class="" style="border: 1px solid black;">
         <?php foreach ($students as $print): ?>
         <tr>
