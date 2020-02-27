@@ -18,12 +18,12 @@
             <div class="col-md-6">
                 <div class="profile-head">
                     <h5>
-                        <?php $students[$_GET["id"]]["first_name"]?> FIRST NAME LAST NAME
+                        <?php echo $student["first_name"] . $student["last_name"]?>
                     </h5>
                     <h6>
-                        QUOTE
+                        <?php echo $student["quote"] ?>
                     </h6>
-                    <p class="proile-rating">QUOTE AUTHOR</p>
+                    <p class="proile-rating"><?php echo $student["quote_author"] ?></p>
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
@@ -41,10 +41,10 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="profile-work">
-                    <P>PREFERRED LANGUAGE</P>
+                    <P><?php echo $student["preferred_language"] ?></P>
                     <p>WORK LINK</p>
-                    <a href="">LINKEDIN</a><br/>
-                    <a href="">GITHUB</a><br/>
+                    <a href="">LINKEDIN:  </a><?php echo $student["linkedin"] ?> <br/>
+                    <a href="">GITHUB:  </a><?php echo $student["github"] ?> <br/>
                 </div>
             </div>
             <div class="col-md-8">
@@ -52,18 +52,18 @@
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="row">
                             <div class="col-md-6">
-                                <label>USER NAME</label>
+                                <label>USERNAME </label>
                             </div>
                             <div class="col-md-6">
-                                <p> ############</p>
+                                <p> <?php echo $student["username"] ?></p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Name</label>
+                                <label>Date Created</label>
                             </div>
                             <div class="col-md-6">
-                                <p>##########3</p>
+                                <p><?php echo $student["created_at"] ?></p>
                             </div>
                         </div>
                         <div class="row">
@@ -71,7 +71,7 @@
                                 <label>Email</label>
                             </div>
                             <div class="col-md-6">
-                                <p>#############</p>
+                                <p><?php echo $student["email"] ?></p>
                             </div>
                         </div>
                         <div class="row">
@@ -79,7 +79,7 @@
                                 <label>VIDEO</label>
                             </div>
                             <div class="col-md-6">
-                                <p>URL#############</p>
+                                <p><?php echo $student["video"] ?></p>
                             </div>
                         </div>
                     </div>

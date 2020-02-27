@@ -22,7 +22,7 @@ class formController{
             $inputFromForm->insertInto($_POST['firstname'], $_POST['lastname'], $_POST['username'], $_POST['linkedin'], $_POST['github'], $_POST['email'], $_POST['preflang'], $_POST['avatar'], $_POST['video'], $_POST['quote'], $_POST['quoteauthor']);
         }
         $statement = new GetFromDB();
-        $students = $statement->gettingData();
+        $students = $statement->getAllData();
 
         require "View/form-view.php";
     }

@@ -80,7 +80,7 @@
         <button type="submit" class="btn btn-primary" name="submit">Send</button>
     </form>
 
-    <a class="btn btn-primary" href="../profile-view.php">Go to profile</a>
+    <a class="btn btn-primary" href="profile-view.php">Go to profile</a>
 
     <form method="post">
     <table class="" style="border: 1px solid black;">
@@ -120,7 +120,7 @@
                 <?php echo $print ["github"]?>
             </td>
             <td>
-                <a href="../profile-view.php?user=<?php echo $print ["id"]?>">To Profile</a>
+                <a href="?user=<?php echo $print ["id"]?>">To Profile</a>
             </td>
 
             <?php endforeach;?>

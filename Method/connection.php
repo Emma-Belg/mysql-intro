@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 class Connection  {
-    function openConnection() {
+    function openConnection() :PDO {
         // Try to figure out what these should be for you
         $dbhost    = "localhost";
         $dbuser    = "becode";

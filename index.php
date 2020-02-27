@@ -9,6 +9,7 @@ require "Method/connection.php";
 require "Method/getFromDB.php";
 require "Method/insert.php";
 
+require "Controller/profileController.php";
 require "Controller/formController.php";
 
 
@@ -27,8 +28,18 @@ function whatIsHappening()
 whatIsHappening();
 
 formController::makeConnection();
-$test = new formController();
-$test->control();
+profileController::makeConnection();
+
+if(isset($_GET["user"])){
+    $profile = new profileController();
+    $profile->profileControl();
+} else {
+    $test = new formController();
+    $test->control();
+}
+
+
+
 
 
 
